@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Faber & Co Real Estate</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <header class="navbar">
+      <div class="logo">
+        <h2><span>FABER & CO</span><br />REAL ESTATE</h2>
+      </div>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#">
+          <div class="login">
+            <img
+              src="data:image/png;base64,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"
+              alt="user"
+              class="user-icon"
+            />
+            <p>Log In</p>
+          </div>
+        </a>
+        <a href="#">Home</a>
+        <a href="#">Agents</a>
+        <a href="#">Contact</a>
+        <a href="#">Book Online</a>
+      </nav>
+
+      <!-- Mobile menu button -->
+      <button
+        class="hamburger"
+        id="hamburger"
+        aria-label="Open menu"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
+    </header>
+
+    <!-- Hero section -->
+    <section class="hero">
+      <div class="carousel">
+        <div
+          class="slide active"
+          style="
+            background-image: url('https://plus.unsplash.com/premium_photo-1661915661139-5b6a4e4a6fcc?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8aG91c2V8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=600');
+          "
+        ></div>
+        <div
+          class="slide"
+          style="
+            background-image: url('https://plus.unsplash.com/premium_photo-1746896139361-2853d58c5cf9?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDYxfE04alZiTGJUUndzfHxlbnwwfHx8fHw%3D&auto=format&fit=crop&q=60&w=600');
+          "
+        ></div>
+        <div
+          class="slide"
+          style="
+            background-image: url('https://plus.unsplash.com/premium_photo-1661883964999-c1bcb57a7357?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8aG91c2V8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=600');
+          "
+        ></div>
+      </div>
+
+      <div class="overlay">
+        <div class="hero-text">
+          <h1>STUNNING 6 BED<br />HOUSE IN THE HEART<br />OF THE CITY</h1>
+          <p>
+            I'm a paragraph. Click here to add <br />
+            your own text and edit me. It’s easy. <br />
+            Just click “Edit Text” or double click <br />
+            me to add your own content and <br />
+            make changes to the font.
+          </p>
+          <div class="seperator">
+            <p>$2,000,000 <br /></p>
+            <button type="button">ALL SALES</button>
+          </div>
+        </div>
+        <div class="call-box">📞 Call us! 123-456-7890</div>
+        <div class="chat-btn">CHAT WITH US</div>
+      </div>
+    </section>
+
+    <!-- Latest properties -->
+    <section class="properties">
+      <h2>LATEST PROPERTIES FOR SALE</h2>
+
+      <div class="property-list">
+        <div class="property-card">
+          <img
+            src="https://images.unsplash.com/photo-1560185127-6ed189bf02f4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHJlYWwlMjBlc3RhdGV8ZW58MHx8MHx8fDA%3D"
+            alt="Down Avenue"
+          />
+          <h3>DOWN AVENUE</h3>
+          <p class="price">$500,000</p>
+          <p class="bedrooms">4 Bedrooms</p>
+          <p class="desc">
+            I’m a paragraph. Click here to add your own text and edit me. It’s
+            easy. Just click “Edit Text” or double click me to add your own
+            content and make changes to the font. I’m a great place for you to
+            tell a story and let your users know a little more about you.
+          </p>
+          <a href="#" class="btn">READ MORE</a>
+        </div>
+
+        <div class="property-card">
+          <img
+            src="https://images.unsplash.com/photo-1634344656611-0773d8dbbe2c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8cmVhbCUyMGVzdGF0ZXxlbnwwfHwwfHx8MA%3D%3D"
+            alt="Queens Way"
+          />
+          <h3>QUEENS WAY</h3>
+          <p class="price">$450,000</p>
+          <p class="bedrooms">3 Bedrooms</p>
+          <p class="desc">
+            I’m a paragraph. Click here to add your own text and edit me. It’s
+            easy. Just click “Edit Text” or double click me to add your own
+            content and make changes to the font. I’m a great place for you to
+            tell a story and let your users know a little more about you.
+          </p>
+          <a href="#" class="btn">READ MORE</a>
+        </div>
+
+        <div class="property-card">
+          <img
+            src="https://images.unsplash.com/photo-1605146769289-440113cc3d00?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cmVhbCUyMGVzdGF0ZXxlbnwwfHwwfHx8MA%3D%3D"
+            alt="Randall Close"
+          />
+          <h3>RANDALL CLOSE</h3>
+          <p class="price">$790,000</p>
+          <p class="bedrooms">6 Bedrooms</p>
+          <p class="desc">
+            I’m a paragraph. Click here to add your own text and edit me. It’s
+            easy. Just click “Edit Text” or double click me to add your own
+            content and make changes to the font. I’m a great place for you to
+            tell a story and let your users know a little more about you.
+          </p>
+          <a href="#" class="btn">READ MORE</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Latest rental properties -->
+    <section class="latest-rentals">
+      <div class="latest-title">
+        <h2>LATEST RENTAL PROPERTIES</h2>
+      </div>
+
+      <div class="latest-band">
+        <div class="container latest-wrap">
+          <div class="rental-row">
+            <div class="rental-media">
+              <img
+                src="https://plus.unsplash.com/premium_photo-1689609950112-d66095626efb?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cmVhbCUyMGVzdGF0ZXxlbnwwfHwwfHx8MA%3D%3D"
+                alt="Chase Avenue house"
+              />
+            </div>
+
+            <div class="rental-info">
+              <h3>CHASE AVENUE</h3>
+              <div class="beds">4 Bedrooms</div>
+              <p>
+                I'm a paragraph. Click here to add your own text and edit me.
+                It’s easy. Just click “Edit Text” or double click me to add your
+                own content and make changes to the font. I'm a great place for
+                you to tell a story and let your users know a little more about
+                you.
+              </p>
+              <div class="price">$500/per week</div>
+            </div>
+          </div>
+
+          <div class="rental-row reverse">
+            <div class="rental-media">
+              <img
+                src="https://images.unsplash.com/photo-1494526585095-c41746248156?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHJlYWwlMjBlc3RhdGV8ZW58MHx8MHx8fDA%3D"
+                alt="Kings Close house"
+              />
+            </div>
+
+            <div class="rental-info">
+              <h3>KINGS CLOSE</h3>
+              <div class="beds">3 Bedrooms</div>
+              <p>
+                I'm a paragraph. Click here to add your own text and edit me.
+                It’s easy. Just click “Edit Text” or double click me to add your
+                own content and make changes to the font. I'm a great place for
+                you to tell a story and let your users know a little more about
+                you.
+              </p>
+              <div class="price">$450/per week</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Realtors section -->
+    <section class="trust">
+      <div class="container trust-wrap">
+        <h2 class="trust-title">REALTORS YOU CAN TRUST</h2>
+
+        <div class="trust-grid">
+          <div class="trust-card">
+            <div class="trust-icon">
+              <img src="icon-clipboard.svg" alt="" />
+            </div>
+            <h3>FREE REGISTRATION<br />NO HIDDEN FEES</h3>
+            <p>
+              I'm a paragraph. Click here to add your own text and edit me. Let
+              your users get to know you.
+            </p>
+          </div>
+
+          <div class="trust-card">
+            <div class="trust-icon">
+              <img src="icon-layers.svg" alt="" />
+            </div>
+            <h3>PROPERTY APPRAISAL<br />FREE OF CHARGE</h3>
+            <p>
+              I'm a paragraph. Click here to add your own text and edit me. Let
+              your users get to know you.
+            </p>
+          </div>
+
+          <div class="trust-card">
+            <div class="trust-icon">
+              <img src="icon-map.svg" alt="" />
+            </div>
+            <h3>LARGE COVERAGE<br />OFFICES IN 4 LOCATIONS</h3>
+            <p>
+              I'm a paragraph. Click here to add your own text and edit me. Let
+              your users get to know you.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section
+      class="testimonials"
+      style="
+        background-image: url('https://images.unsplash.com/photo-1736601758644-322332ff96cf?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGVzdGF0ZSUyMGZhc2FkfGVufDB8fDB8fHww');
+      "
+    >
+      <div class="testimonials-overlay"></div>
+
+      <div class="testimonials-content">
+        <h2>WHAT OUR CLIENTS THINK</h2>
+
+        <div class="testimonials-grid">
+          <div class="testi-card">
+            <div class="quote-icon">“</div>
+            <p>
+              "I'm a testimonial. Click to edit me and add text that says
+              something nice about you and your services"
+            </p>
+            <div class="author">- Tina & James Heart</div>
+          </div>
+
+          <div class="testi-card">
+            <div class="quote-icon">“</div>
+            <p>
+              "I'm a testimonial. Click to edit me and add text that says
+              something nice about you and your services"
+            </p>
+            <div class="author">- Mary van den Reich</div>
+          </div>
+
+          <div class="testi-card">
+            <div class="quote-icon">“</div>
+            <p>
+              "I'm a testimonial. Click to edit me and add text that says
+              something nice about you and your services"
+            </p>
+            <div class="author">- Paul & Susan Taylor</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact">
+      <div class="container contact-inner">
+        <h2 class="contact-title">CONTACT US</h2>
+
+        <div class="contact-grid">
+          <div class="contact-left">
+            <h3 class="contact-subtitle">ADDRESS</h3>
+
+            <p class="contact-address">
+              500 Terry Francine Street<br />
+              San Francisco, CA 94158
+            </p>
+
+            <div class="contact-map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.086730706379!2d-122.403!3d37.787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDQ3JzEzLjAiTiAxMjLCsDI0JzEwLjgiVw!5e0!3m2!1sen!2sus!4v1700000000000"
+                width="100%"
+                height="260"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+
+            <div class="contact-agent-title">
+              TO SPEAK WITH AN AGENT,<br />
+              PLEASE CALL OR EMAIL US:
+            </div>
+
+            <p class="contact-details">
+              Email: info@mysite.com<br />
+              Tel: 123-456-7890<br />
+              Fax: 123-456-7890
+            </p>
+          </div>
+
+          <div class="contact-right">
+            <h3 class="contact-form-title">
+              ALTERNATIVELY YOU CAN<br />
+              FILL IN THE FOLLOWING<br />
+              CONTACT FORM:
+            </h3>
+
+            <form class="contact-form" action="#" method="post">
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="first-name">First name *</label>
+                  <input
+                    type="text"
+                    id="first-name"
+                    name="firstName"
+                    required
+                  />
+                </div>
+
+                <div class="form-field">
+                  <label for="last-name">Last name *</label>
+                  <input type="text" id="last-name" name="lastName" required />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-field full">
+                  <label for="email">Email *</label>
+                  <input type="email" id="email" name="email" required />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-field full">
+                  <label for="subject">Subject</label>
+                  <input type="text" id="subject" name="subject" />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-field full">
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" rows="5"></textarea>
+                </div>
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="btn-submit">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
